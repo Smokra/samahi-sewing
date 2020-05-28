@@ -27,9 +27,9 @@ body {
   max-width: 250px;
   margin: 0 auto;
   border-radius: 50%;
-  background: linear-gradient(145deg, #dedede, #ffffff);
-  box-shadow: 41px 41px 82px #b9b9b9,
-    -41px -41px 82px #ffffff;
+  background: linear-gradient(145deg, #850085, #9e009e);
+  box-shadow: 5px 5px 30px #680068,
+    -5px -5px 30px #c000c0;
 }
 
 #main {
