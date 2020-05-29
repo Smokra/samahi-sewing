@@ -18,14 +18,15 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
   background-color: #f7f7f7;
 }
 
 .logo {
   display: flex;
-  max-width: 250px;
+  max-width: 175px;
   margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
   border-radius: 50%;
   background: linear-gradient(145deg, #850085, #9e009e);
   box-shadow: 5px 5px 30px #680068,
@@ -33,8 +34,7 @@ body {
 }
 
 #main {
-  max-width: 1280px;
-  margin: 5%;
+  max-width: 90%;
 }
 
 .content {
@@ -72,8 +72,27 @@ p {
   font-weight: 300;
 }
 
+.my-row {
+  flex-wrap: nowrap;
+  margin: 0;
+}
+.img-box {
+  padding: 20px;
+  margin: 1.5%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 144px;
+  background: linear-gradient(145deg, #ffffff, #dedede);
+  box-shadow:  5px 5px 9px #d2d2d2, 
+               -5px -5px 9px #ffffff;
+}
+
 .bags {
-  max-width: 100%;
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 1;
 }
 
 .form {
