@@ -15,18 +15,17 @@ body {
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 100%;
   background-color: #f7f7f7;
+  min-height: 100vh;
 }
 
 .logo {
   display: flex;
-  max-width: 175px;
+  max-width: 160px;
   margin: 0 auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
   border-radius: 50%;
   background: linear-gradient(145deg, #850085, #9e009e);
   box-shadow: 5px 5px 30px #680068,
@@ -44,9 +43,9 @@ body {
 .content-bg {
   border-radius: 20px;
   background: #f7f7f7;
-box-shadow:  5px 5px 9px #d2d2d2, 
-             -5px -5px 9px #ffffff;
-      }
+  box-shadow: 5px 5px 9px #d2d2d2,
+    -5px -5px 9px #ffffff;
+}
 
 h1 {
   font-family: 'Source Sans Pro', sans-serif;
@@ -76,17 +75,19 @@ p {
   margin: 0 auto;
   justify-content: space-evenly;
 }
+
 .img-box {
   padding: 20px;
   margin: 1.5%;
   z-index: 10;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 144px;
+  border-radius: 50%;
   background: linear-gradient(145deg, #ffffff, #dedede);
-  box-shadow:  5px 5px 9px #d2d2d2, 
-               -5px -5px 9px #ffffff;
+  box-shadow: 5px 5px 9px #d2d2d2,
+    -5px -5px 9px #ffffff;
 }
 
 .bags {
@@ -110,7 +111,7 @@ p {
   display: block;
   position: absolute;
   width: 0;
-  margin-left: calc(-4.5rem - 0.5px);
+  margin-left: calc(-4.9rem - 0.5px);
   border-left: solid 1px rgba(0, 0, 0, 0.102);
   top: 0;
   height: 100%;
@@ -130,26 +131,26 @@ p:nth-child(2) {
   margin-top: -2em;
   border-radius: 10px;
   background: #f7f7f7;
-  box-shadow: inset 2px 2px 5px #d2d2d2, 
-              inset -2px -2px 5px #ffffff;
+  box-shadow: inset 2px 2px 5px #d2d2d2,
+    inset -2px -2px 5px #ffffff;
 }
 
 #message {
   width: 100%;
-  height: 200px;
+  min-height: 25vh;
   border: 0px solid rgba(0, 0, 0, 0.102);
   padding: 22px;
   border-radius: 10px;
   background: #f7f7f7;
-  box-shadow: inset 2px 2px 5px #d2d2d2, 
-              inset -2px -2px 5px #ffffff;
+  box-shadow: inset 2px 2px 5px #d2d2d2,
+    inset -2px -2px 5px #ffffff;
 }
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.102);
 }
 
-input[type=text]:focus {
+input:focus {
   outline: none !important;
   border-color: #940094;
   box-shadow: 0px 0px 0px 2px #940094;
@@ -191,8 +192,8 @@ input[type=text]:focus {
   padding: 10px;
   border-radius: 50%;
   background: linear-gradient(145deg, #ffffff, #dedede);
-  box-shadow:  5px 5px 9px #d2d2d2, 
-             -5px -5px 9px #ffffff;
+  box-shadow: 5px 5px 9px #d2d2d2,
+    -5px -5px 9px #ffffff;
 
 }
 
