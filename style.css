@@ -100,7 +100,7 @@ p {
 }
 
 .img-box:active .bags {
-  transform: scale(4);
+  transform: scale(3);
   transition: ease;
   transition-duration: 0.5s;
   overflow: visible;
@@ -155,7 +155,7 @@ p:nth-child(2) {
 
 #message {
   width: 100%;
-  min-height: 25vh;
+  height: 10em;
   border: 0px solid rgba(0, 0, 0, 0.102);
   padding: 22px;
   border-radius: 10px;
@@ -227,8 +227,6 @@ p:nth-child(2) {
   text-decoration: none;
   color: #940094;
   border: 1px solid #940094;
-  /*transition-delay: 0.1s;
-  transition-duration: 0.5s;*/
 }
 
 a {
@@ -246,6 +244,23 @@ a {
   color: #9e009e;
 }
 
+@media only screen and (max-width: 767px) {
+  .form {
+    padding: 15px;
+  }
+
+  .form::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    border-top: solid 1px rgba(0, 0, 0, 0.102);
+    top: 10px;
+    left: 65px;
+    height: 0%;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .content {
     text-align: center;
@@ -255,6 +270,7 @@ a {
   .c-content {
     display: flex;
     justify-content: center;
+    text-align: center;
   }
 
   .form::before {
@@ -267,7 +283,31 @@ a {
     height: 0%;
   }
 
-  #main {
-    margin: 0 15px;
+  #message {
+    height: 10em;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  #message {
+    height: 10em;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  #message {
+    height: 12em;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #message {
+    min-height: 14em;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #message {
+    min-height: 20em;
   }
 }
