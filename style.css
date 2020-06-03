@@ -23,12 +23,12 @@ body {
   display: flex;
   max-width: 160px;
   margin: 0 auto;
-  margin-top: 4%;
-  margin-bottom: 4%;
+  margin-top: 3%;
+  margin-bottom: 3%;
   border-radius: 50%;
-  background: linear-gradient(145deg, #850085, #9e009e);
-  box-shadow: 5px 5px 30px #680068,
-    -5px -5px 30px #c000c0;
+  background: linear-gradient(145deg, #8e008e, #a900a9);
+  box-shadow: 2px 2px 10px #9b009b,
+    -2px -2px 10px #a100a1;
 }
 
 #main {
@@ -146,7 +146,6 @@ p:nth-child(2) {
   height: 40px;
   border: 0px solid rgba(0, 0, 0, 0.102);
   padding: 22px;
-  margin-top: -2em;
   border-radius: 10px;
   background: #f7f7f7;
   box-shadow: inset 2px 2px 5px #d2d2d2,
@@ -165,7 +164,8 @@ p:nth-child(2) {
 }
 
 ::placeholder {
-  color: rgba(0, 0, 0, 0.102);
+  font-weight: 200;
+  color: #c9c9c9;
 }
 
 
