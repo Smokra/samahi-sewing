@@ -104,14 +104,19 @@ p {
   transition: ease;
   transition-duration: 0.5s;
   overflow: visible;
-  z-index: 9000;
+  z-index: 1;
+}
+
+picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bags {
   max-width: 90%;
   max-height: 90%;
   transition: ease 0.5s;
-  z-index: 1;
 }
 
 .form {
