@@ -99,12 +99,16 @@ p {
   transform: scale(0.9);
 }
 
+.img-box:hover,
+.img-box:active {
+  z-index: 1;
+}
+
 .img-box:active .bags {
   transform: scale(3);
   transition: ease;
   transition-duration: 0.5s;
   overflow: visible;
-  z-index: 1;
 }
 
 picture {
