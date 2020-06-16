@@ -46,6 +46,10 @@ body {
     -5px -5px 9px #ffffff;
 }
 
+.content p {
+  margin-top: 1em;
+}
+
 h1 {
   font-family: 'Source Sans Pro', sans-serif;
   color: #545454;
@@ -155,7 +159,7 @@ picture {
 .form-control:focus+.form-control-placeholder,
 .form-control:valid+.form-control-placeholder {
   font-size: 75%;
-  transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -110%, 0);
   opacity: 1;
 }
 
@@ -171,11 +175,11 @@ label {
 
 #name,
 #email {
-  align-items: center;
   width: 100%;
   height: 40px;
   border: 0px solid rgba(0, 0, 0, 0.102);
   padding: 22px;
+  margin-top: 2em;
   border-radius: 10px;
   background: #f7f7f7;
   box-shadow: inset 2px 2px 5px #d2d2d2,
@@ -187,6 +191,7 @@ label {
   height: 10em;
   border: 0px solid rgba(0, 0, 0, 0.102);
   padding: 22px;
+  margin-top: 2em;
   border-radius: 10px;
   background: #f7f7f7;
   box-shadow: inset 2px 2px 5px #d2d2d2,
