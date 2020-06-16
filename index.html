@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Samahi Sewing is a place where people can order custom made bean bags as well as custom made pillows.">
+  <meta property="og:title" content="Samahi Sewing">
+  <meta property="og:description" content="Custom bean bags and pillows.">
+  <meta property="og:image" content="https://samahi.hr/images/logo-cut-purple.png">
+  <meta property="og:url" content="https://samahi.hr/index.html">
   <title>Samahi Sewing</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -123,9 +127,7 @@
           </div>
         </div>
         <div class="col-md-12 col-lg-6 c-content">
-          <p>©<script>
-              document.write(new Date().getFullYear());
-            </script>, Samahi Sewing. All rights reserved.</p>
+          <p>©<span class="js-year"></span>, Samahi Sewing. All rights reserved.</p>
         </div>
         <div class="col-12 text-center">
           <p>This page is made with <i class="fa fa-heart-o heart" aria-hidden="true"></i> by <a
@@ -135,6 +137,12 @@
       </div>
     </div>
   </div>
+  <script>
+    var $year = document.querySelector('.js-year');
+    if ($year) {
+      $year.innerHTML = new Date().getFullYear();
+    }
+  </script>
 </body>
 
 </html>
