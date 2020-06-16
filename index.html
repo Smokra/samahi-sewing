@@ -87,7 +87,10 @@
             <h3>Sit on your own idea!</h3>
             <p>If you have an idea for your unique made bean bag, feel free to describe it below.</p>
 
-            <form name="form" data-netlify="true">
+            <form name="form" netlify-honeypot="bot-field" data-netlify="true">
+              <div class="hidden">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </div>
               <div class="form-group">
                 <input type="text" id="name" class="form-control" required>
                 <label class="form-control-placeholder" for="name">Name</label>

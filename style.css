@@ -230,6 +230,10 @@ label {
   filter: brightness(1.2);
 }
 
+.hidden {
+  display: none;
+}
+
 .footer {
   margin-top: 1em;
 }
