@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
 }
 
-#logo {
+.logo {
   display: flex;
   max-width: 160px;
   margin: 0 auto;
