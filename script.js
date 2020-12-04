@@ -1,5 +1,5 @@
-var tl = gsap.timeline({ defaults:{opacity:0, ease:"back"}});
-gsap.set(".page-wrapper", {rotationY:15})
+ var tl = gsap.timeline({ defaults:{opacity:0, ease:"back"}});
+gsap.set(".page-wrapper", {})
 function init() {
     tl.from(".page-wrapper", {autoAlpha:0})  //this nullifies visibility:none; from CSS 
     .from(".logo", {duration: 1.5, rotation: -180, scale: 0.2, ease:"bounce"})
