@@ -282,6 +282,14 @@ a {
   color: #9e009e;
 }
 
+.carousel-inner {
+  overflow: visible;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #940094;
+}
+
 @media only screen and (max-width: 767px) {
   .form {
     padding: 15px;

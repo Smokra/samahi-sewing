@@ -7,7 +7,7 @@ function init() {
     .from("h2", {x:-80, duration:1}, "<")
     .from(".animate", {y:30}, "-=0.2")
     .from(".img-box", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=0.5")
-    .from(".form-group", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=0.5")
+    .from(".form-group", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=1.5")
     .from("button", {y:50}, "-=0.1") 
 }
 
