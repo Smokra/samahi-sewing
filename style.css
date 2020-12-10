@@ -120,7 +120,6 @@ p {
   overflow: hidden;
 }
 
-
 .img-box {
   padding: 20px;
   margin: 1.5%;
@@ -154,6 +153,7 @@ p {
   transform: scale(3);
   transition: ease;
   transition-duration: 0.5s;
+  z-index: 9999;
   overflow: visible;
 }
 
