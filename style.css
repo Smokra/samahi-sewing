@@ -169,10 +169,30 @@ picture {
   transition: ease 0.5s;
 }
 
+.lightboxOverlay {
+  background-color: #fff;
+}
+
+.lb-outerContainer {
+  background-color: #54545400; 
+}
+/*
 .carousel-indicators li {
   background-color: #940094;
 }
 
+.lightbox-gallery {
+  overflow-x: hidden
+}
+
+.lightbox-gallery .photos {
+  padding-bottom: 20px
+}
+
+.lightbox-gallery .item {
+  padding-bottom: 30px
+}
+*/
 .form {
   padding: 50px;
 }
