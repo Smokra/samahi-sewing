@@ -11,7 +11,8 @@
   <meta name="image" property="og:image" content="https://samahi.hr/images/rsz-logo-cut-purple.png">
   <meta property="og:url" content="https://samahi.hr/index.html">
   <title>Samahi Sewing</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">-->
+  <link type="text/css" rel="stylesheet" href="lightgallery.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
@@ -63,10 +64,10 @@
               </div>
 
               <div class="slides-container carousel-inner ">
-                <div class="slides-inner carousel-item active lightbox-gallery">
+                <div class="slides-inner carousel-item active lightgallery">
                   <div class="slide">
                     <div class="row my-row photos">
-                      <div class="col-3 img-box item">
+                      <div id="anchor-tag" class="col-3 img-box item">
                         <picture>
                           <a href="./images/2tone-cut.png" data-lightbox="photos">
                             <source type="image/webp" srcset="./images/2tone-cut.webp">
@@ -74,14 +75,14 @@
                           </a>
                         </picture>
                       </div>
-                      <div class="col-3 img-box item">
+                      <div id="anchor-tag" class="col-3 img-box item">
                         <picture>
                           <a href="./images/brown2-cut.png" data-lightbox="photos">
                             <source type="image/webp" srcset="./images/brown2-cut.webp">
                             <img src="./images/brown2-cut.png" class="bags" alt="brown bean bag"></a>
                         </picture>
                       </div>
-                      <div class="col-3 img-box item">
+                      <div id="anchor-tag" class="col-3 img-box item">
                         <picture>
                           <a href="./images/gray-cut.png" data-lightbox="photos">
                             <source type="image/webp" srcset="./images/gray-cut.webp">
@@ -91,7 +92,7 @@
                       </div>
                     </div>
                     <div class="row my-row photos">
-                      <div class="col-3 img-box item">
+                      <div id="anchor-tag" class="col-3 img-box item">
                         <picture>
                           <a href="./images/goldish-cut.png" data-lightbox="photos">
                             <source type="image/webp" srcset="./images/goldish-cut.webp">
@@ -252,8 +253,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
   <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>-->
+  <script src="lightgallery.js"></script>
+  <script src="lg-thumbnail.js"></script>
+  <script src="lg-fullscreen.js"></script>
+
   <script src="./script.js"></script>
+  <script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'));
+  </script>
 
 </body>
 
