@@ -125,6 +125,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border-radius: 50%;
   background: linear-gradient(145deg, #ffffff, #dedede);
   box-shadow: 5px 5px 9px #d2d2d2,
@@ -412,3 +413,27 @@ a {
   }
 }
 
+.arrow {
+  border: solid #940094;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.carousel-indicators {
+  right: -10px;
+  bottom: 53%;
+  left: -10px;
+  margin-left: 0;
+  margin-right: 0;
+}
