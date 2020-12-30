@@ -18,14 +18,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
+// ############ Begining of Modal image gallery ###################
+let slideIndex = 1;
+showSlide(slideIndex);
 
- /* .to(".car.yellow", {duration: 5, x:500, ease:"none"}, "-=1")
-  //this allows the green car to come in as the yellow car leaves
-  .fromTo(".car.green", {x:0} , {duration: 5, x:500, ease:"none"}, "-=1")
+function openLightbox() {
+    document.getElementById('Lightbox').style.display = 'flex';
+};
 
-//this creates the seamless loop from time of 1 second to 9 seconds
-let controller = tl.tweenFromTo(1, 9, {ease:"none", repeat:-1})
+function closeLightbox() {
+    document.getElementById('Lightbox').style.display = 'none';
+};
 
-//click anywhere to toggle play/pause
-document.addEventListener("click", () => controller.paused(!controller.paused()))
-*/
+function changeSlide(n) {
+    showSlide(slideIndex += n);
+};
+
+function toSlide(n) {
+    showSlide(slideIndex = n);
+};
+
+function showSlide(n) {
+    const slides = document.getElementsByClassName('slide');
+    let modalPreviews = document.getElementsByClassName('modal-preview');
+
+    if (n > slides.length) {
+        slideIndex = 1;
+    };
+
+    if (n < 1) {
+        slideIndex = slides.length;
+    };
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    };
+
+    for (let i = 0; i < modalPreviews.length; i++) {
+        modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+    };
+
+    slides[slideIndex - 1].style.display = 'block';
+    modalPreviews[slideIndex - 1].className += ' active';
+};
+// ############ End of Modal image gallery ###################
