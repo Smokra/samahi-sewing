@@ -148,7 +148,7 @@ picture {
   background-color: #ffffff00;
 }
 
-.slide {
+.box-slide {
   display: none;
   text-align: center;
 }
@@ -274,6 +274,42 @@ img.active {
 }
 /* ################################# END OF MODAL IMAGE GALLERY ########################### */
 
+/* ############## START OF CAROUSELL #################### */
+.carousel {
+  overflow: hidden;
+}
+
+.controls {
+  padding: 10px;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  min-height: 70px;
+}
+
+.slides-container {
+ /* position: relative; */
+  overflow: hidden;  
+  display: flex;
+  flex: 1;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.slides-inner {
+ /* position: relative; */
+  height: 460px;
+  width: 100%;  
+  overflow: hidden;
+}
+/* ############## END OF CAROUSELL #################### */
 
 .form {
   padding: 50px;
