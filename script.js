@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var tl = gsap.timeline({ defaults:{opacity:0, ease:"back"}});
 gsap.set(".page-wrapper", {})
 function init() {
@@ -9,13 +10,31 @@ function init() {
     .from(".img-box", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=0.5")
     .from(".form-group", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=1.5")
     .from("button", {y:50}, "-=0.1") 
+=======
+// ######## Begining of page animation ############
+var tl = gsap.timeline({ defaults:{opacity:0, ease:"back"}});
+function init() {
+    tl.from(".page-wrapper", {autoAlpha:0})  //this nullifies visibility:hidden; from CSS 
+    .from(".logo", {duration: 1.5, rotation: -180, scale: 0.2, ease:"bounce"})
+    .from("h1, h3", {x:80, duration:1}, "-=1")
+    .from("h2", {x:-80, duration:1}, "<")
+    .from(".animate", {y:50}, "-=0.2")
+    .from(".img-box", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=0.5")
+    .from(".form-group", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=2")
+    .from(".btn", {y:50}, "-=1") 
+    .from("#prevButton", {x:-30}, "-=1.5")
+    .from("#nextButton", {x:30}, "-=1.5")
+//ovo je samo test
+>>>>>>> phaseThree
 }
 
 window.addEventListener("load", function(event) { 
   init(); //do stuff after page load it self, don't forget about autoAlpha
 });
+// ######## End of page animation ############
 
 
+<<<<<<< HEAD
 var slideDelay = 1.5;
 var slideDuration = 0.3;
 var snapX;
@@ -31,6 +50,70 @@ gsap.set(slides, {
   xPercent: i => i * 100
 });
 
+=======
+// ############ Begining of Modal image gallery ###################
+let slideIndex = 1;
+showSlide(slideIndex);
+
+function openLightbox() {
+    document.getElementById('Lightbox').style.display = 'flex';
+};
+
+function closeLightbox() {
+    document.getElementById('Lightbox').style.display = 'none';
+};
+
+function changeSlide(n) {
+    showSlide(slideIndex += n);
+};
+
+function toSlide(n) {
+    showSlide(slideIndex = n);
+};
+
+function showSlide(n) {
+    const slides = document.getElementsByClassName('box-slide');
+    let modalPreviews = document.getElementsByClassName('modal-preview');
+
+    if (n > slides.length) {
+        slideIndex = 1;
+    };
+
+    if (n < 1) {
+        slideIndex = slides.length;
+    };
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    };
+
+    for (let i = 0; i < modalPreviews.length; i++) {
+        modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+    };
+
+    slides[slideIndex - 1].style.display = 'block';
+    //modalPreviews[slideIndex - 1].className += ' active';
+    //!!!!!!!!!!!!!!!!!! popraviti ovo, ako odkomentiram .slide se nalazi jedan preko drugoga i dugmeta za carousel ne rade
+};
+// ############ End of Modal image gallery ###################
+
+// ############ Start of Carousel  ###################
+var slideDelay = 1.5;
+var slideDuration = 0.3;
+var snapX;
+
+var slides = document.querySelectorAll(".slide");
+var prevButton = document.querySelector("#prevButton");
+var nextButton = document.querySelector("#nextButton");
+var progressWrap = gsap.utils.wrap(0, 1);
+
+var numSlides = slides.length;
+
+gsap.set(slides, {
+  xPercent: i => i * 100
+});
+
+>>>>>>> phaseThree
 var wrap = gsap.utils.wrap(-100, (numSlides - 1) * 100);
 var timer = gsap.delayedCall(slideDelay);
 
@@ -62,12 +145,21 @@ nextButton.addEventListener("click", function() {
 });
 
 function animateSlides(direction) {
+<<<<<<< HEAD
     
   timer.restart(true);
   slideAnimation.kill();
   
   var x = snapX(gsap.getProperty(proxy, "x") + direction * slideWidth);
   
+=======
+
+  timer.restart(true);
+  slideAnimation.kill();
+
+  var x = snapX(gsap.getProperty(proxy, "x") + direction * slideWidth);
+
+>>>>>>> phaseThree
   slideAnimation = gsap.to(proxy, {
     x: x,
     duration: slideDuration,
@@ -80,6 +172,7 @@ function updateProgress() {
 }
 
 function resize() {
+<<<<<<< HEAD
   
   var norm = (gsap.getProperty(proxy, "x") / wrapWidth) || 0;
   
@@ -91,6 +184,19 @@ function resize() {
     x: norm * wrapWidth
   });
   
+=======
+
+  var norm = (gsap.getProperty(proxy, "x") / wrapWidth) || 0;
+
+  slideWidth = slides[0].offsetWidth;
+  wrapWidth = slideWidth * numSlides;
+  snapX = gsap.utils.snap(slideWidth);
+
+  gsap.set(proxy, {
+    x: norm * wrapWidth
+  });
+
+>>>>>>> phaseThree
   animateSlides(0);
   slideAnimation.progress(1);
 }

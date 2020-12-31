@@ -1,22 +1,24 @@
-* {
+html {
   box-sizing: border-box;
 }
 
-html {
-  font-size: 13px;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-size: 1.3em;
+  background-color: #f7f7f7;
 }
 
 .page-wrapper {
   visibility: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #f7f7f7;
   min-height: 100vh;
 }
 
@@ -77,6 +79,7 @@ p {
 
 .my-row {
   margin: 0 auto;
+  margin-bottom: 5%;
   justify-content: space-evenly;
 }
 
@@ -160,6 +163,7 @@ picture {
   transition: ease 0.5s;
 }
 
+<<<<<<< HEAD
 .lightboxOverlay {
   background-color: #fff;
 }
@@ -173,6 +177,96 @@ picture {
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
+=======
+/* ################################# BEGINING OF MODAL IMAGE GALLERY ########################### */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  border: 0px solid;
+  border-color: #ffffff00;
+  background-color: #ffffff00;
+}
+
+.box-slide {
+  display: none;
+  text-align: center;
+}
+
+.image-slide {
+  width: 100%;
+  max-width: 900px;
+}
+
+.modal-preview {
+  width: 100%;
+}
+
+img.preview,
+img.modal-preview {
+  opacity: 1;
+}
+
+img.active {
+  opacity: 0.6;
+}
+
+.preview:hover,
+.modal-preview:hover {
+  opacity: 1;
+}
+
+.arrow, #prevButton, #nextButton {
+  border: solid #940094;
+  border-width: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  width: auto;
+  margin-top: -50px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.arrow:hover, #prevButton:hover, #nextButton:hover {
+  border: solid #94009493;
+  border-width: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  width: auto;
+  margin-top: -50px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+>>>>>>> phaseThree
 }
 
 .right {
@@ -185,6 +279,113 @@ picture {
   -webkit-transform: rotate(135deg);
 }
 
+<<<<<<< HEAD
+=======
+.close {
+  color: #940094;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #940094;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.next {
+  right: -10%;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous {
+  left: -10%;
+  border-radius: 3px 0 0 3px;
+}
+
+@media screen and (max-width: 1050px) {
+  .modal {
+      padding: 30px 32px 0px 32px;
+  }
+  .modal-content {
+      margin-top: 100px;
+      max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .next {
+    right: -1%;
+  }
+
+  .previous {
+    left: -1%;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .modal {
+      padding: 30px 10px 0px 10px;
+  }
+}
+/* ################################# END OF MODAL IMAGE GALLERY ########################### */
+
+/* ############## START OF CAROUSELL #################### */
+.carousel {
+  overflow: hidden;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between  ;
+}
+
+.button-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 15px;
+}
+
+.button-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 15px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.slides-container {
+ /* position: relative; */
+  overflow: hidden;  
+  display: flex;
+  flex: 1;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.slides-inner {
+ /* position: relative; */
+  height: 460px;
+  width: 100%;  
+  overflow: hidden;
+}
+/* ############## END OF CAROUSELL #################### */
+
+>>>>>>> phaseThree
 .form {
   padding: 50px;
 }
@@ -406,6 +607,7 @@ a {
     min-height: 20em;
   }
 }
+<<<<<<< HEAD
 
 @media only screen and (max-width: 480px) {
   .slides-inner {
@@ -437,3 +639,6 @@ a {
   margin-left: 0;
   margin-right: 0;
 }
+=======
+/*ovo je samo test*/
+>>>>>>> phaseThree
