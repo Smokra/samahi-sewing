@@ -11,7 +11,6 @@ function init() {
     .from(".btn", {y:50}, "-=1") 
     .from("#prevButton", {x:-30}, "-=1.5")
     .from("#nextButton", {x:30}, "-=1.5")
-//ovo je samo test
 }
 
 window.addEventListener("load", function(event) { 
