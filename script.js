@@ -144,3 +144,14 @@ function resize() {
   animateSlides(0);
   slideAnimation.progress(1);
 }
+
+/* ########## Disabeling image download ################# */
+function nocontext(e) {
+    var clickedTag = (e==null) ? event.srcElement.tagName : e.target.tagName;
+        if (clickedTag == "IMG") {
+            alert(alertMsg);
+            return false;
+        }
+    }
+var alertMsg = "Image is copyrighted!";
+document.oncontextmenu = nocontext;
