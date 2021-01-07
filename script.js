@@ -62,3 +62,15 @@ function showSlide(n) {
     modalPreviews[slideIndex - 1].className += ' active';
 };
 // ############ End of Modal image gallery ###################
+
+
+/* ########## Disabeling image download ################# */
+function nocontext(e) {
+    var clickedTag = (e==null) ? event.srcElement.tagName : e.target.tagName;
+        if (clickedTag == "IMG") {
+            alert(alertMsg);
+            return false;
+        }
+    }
+var alertMsg = "Image is copyrighted!";
+document.oncontextmenu = nocontext;
