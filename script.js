@@ -5,12 +5,7 @@ function init() {
     .from(".logo", {duration: 1.5, rotation: -180, scale: 0.2, ease:"bounce"})
     .from("h1, h3", {x:80, duration:1}, "-=1")
     .from("h2", {x:-80, duration:1}, "<")
-<<<<<<< HEAD
-    //.from("p", {y:80, duration:1}, "-=0.2")
-    .from(".animate", {y:30}, "-=0.2")
-=======
     .from(".animate", {y:50}, "-=0.2")
->>>>>>> phaseThree
     .from(".img-box", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=0.5")
     .from(".form-group", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=2")
     .from(".btn", {y:50}, "-=1") 
