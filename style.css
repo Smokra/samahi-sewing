@@ -76,6 +76,13 @@ p {
   font-weight: 300;
 }
 
+hr.style-one {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
 .my-row {
   margin: 0 auto;
   margin-bottom: 5%;
@@ -148,7 +155,7 @@ picture {
   background-color: #ffffff00;
 }
 
-.slide {
+.box-slide {
   display: none;
   text-align: center;
 }
@@ -177,7 +184,9 @@ img.active {
   opacity: 1;
 }
 
-.arrow {
+.arrow,
+#prevButton,
+#nextButton {
   border: solid #940094;
   border-width: 0 5px 5px 0;
   border-radius: 0 3px 3px 0;
@@ -185,16 +194,20 @@ img.active {
   padding: 5px;
   cursor: pointer;
   position: absolute;
-  top: 60%;
+  top: 55%;
   width: auto;
   margin-top: -50px;
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
   user-select: none;
+  z-index: 1;
+  background-color: transparent;
 }
 
-.arrow:hover {
+.arrow:hover,
+#prevButton:hover,
+#nextButton:hover {
   border: solid #94009493;
   border-width: 0 5px 5px 0;
   border-radius: 0 3px 3px 0;
@@ -202,7 +215,7 @@ img.active {
   padding: 5px;
   cursor: pointer;
   position: absolute;
-  top: 60%;
+  top: 55%;
   width: auto;
   margin-top: -50px;
   font-weight: bold;
@@ -268,15 +281,67 @@ img.active {
   }
 }
 
-
 @media screen and (max-width: 700px) {
   .modal {
     padding: 30px 10px 0px 10px;
   }
 }
+<<<<<<< HEAD
 
 /* ################################# END OF MODAL IMAGE GALLERY ########################### */
+=======
+>>>>>>> phaseThree
 
+/* ######################## END OF MODAL IMAGE GALLERY ########################### */
+
+/* ############## START OF CAROUSELL #################### */
+.carousel {
+  overflow: hidden;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 15px;
+}
+
+.button-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 15px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.slides-container {
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.slides-inner {
+  height: 460px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ############## END OF CAROUSELL #################### */
 
 .form {
   padding: 50px;
@@ -287,7 +352,7 @@ img.active {
   display: block;
   position: absolute;
   width: 0;
-  margin-left: calc(-4.9rem - 0.5px);
+  margin-left: calc(-2.9rem - 3.5px);
   border-left: solid 1px rgba(0, 0, 0, 0.102);
   top: 0;
   height: 100%;
