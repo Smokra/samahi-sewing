@@ -7,10 +7,10 @@ function init() {
     .from("h2", {x:-80, duration:1}, "<")
     .from(".animate", {y:50}, "-=0.2")
     .from(".img-box", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=0.5")
-    .from(".form-group", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=2")
-    .from(".btn", {y:50}, "-=1") 
-    .from("#prevButton", {x:-30}, "-=1.5")
-    .from("#nextButton", {x:30}, "-=1.5")
+    .from(".form-group", {scale:0, transformOrigin:"50% 50%", stagger:0.2}, "-=5")
+    .from(".btn", {y:50}, "-=3.5") 
+    .from("#prevButton", {x:-30}, "-=3.5")
+    .from("#nextButton", {x:30}, "-=3.5")
 }
 
 window.addEventListener("load", function(event) { 
